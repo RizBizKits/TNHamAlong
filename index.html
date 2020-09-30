@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!--     <meta name="twitter:image" content="https://imgur.com/a/JpALQWX" />
+     -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tn-ham-along.glitch.me/">
+    <meta property="twitter:title" content="TN HamAlong  - Real Time Timer">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="https://cdn.glitch.com/7b9b5a94-61a9-4933-ba7e-aed7d237570f%2FTNHamAlong.jpg?v=1593883903520">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    
+    <script>
+      $(document).ready(function(){
+        
+        var timer = new Timer();
+        var dateItHappens = new Date(2020, 06, 05, 20, 00, 20, 0);
+        var millisTillOccurence = dateItHappens.getTime() - new Date().getTime();
+        
+        setTimeout(function(){ 
+          timer.start({precision: 'seconds', target: {seconds: 9600}});
+          $('.timer-instructions').text("T̶h̶i̶s̶ ̶t̶i̶m̶e̶r̶ ̶w̶i̶l̶l̶ ̶k̶i̶c̶k̶-̶o̶f̶f̶ ̶e̶x̶a̶c̶t̶l̶y̶ ̶o̶n̶ ̶S̶u̶n̶d̶a̶y̶ ̶5̶t̶h̶,̶ ̶J̶u̶l̶y̶,̶ ̶a̶t̶ ̶p̶r̶e̶c̶i̶s̶e̶l̶y̶ ̶8̶:̶0̶0̶P̶M̶.̶");
+
+
+        }, millisTillOccurence);
+        
+        
+        
+        //updating values
+        timer.addEventListener('secondsUpdated', function (e) {
+            $('#timer-panel .values').html(timer.getTimeValues().toString());
+        });
+
+        timer.addEventListener('started', function (e) {
+            $('#timer-panel .values').html(timer.getTimeValues().toString());
+        });
+
+        timer.addEventListener('reset', function (e) {
+            $('#timer-panel .values').html(timer.getTimeValues().toString());
+        });
+        
+        timer.addEventListener('targetAchieved', function (e) {
+            $('#timer-panel .fin').html('It was only a matter of time.');
+        });
+
+
+      });
+
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+
+  </head>  
+  <body>
+    
+    <section class="header-section">
+      <img src="https://hamiltonmusical.com/wp-content/themes/hamilton-theme/img/hamilton-2-5-logo.svg" class="ham-logo" alt="Hamilton star logo">
+      <h2 class="main-title">This is the #TNHamAlong</h2>
+
+    </section>
+    
+    <section class="content-section">
+      <h3 class="main-title">Here's the gist:</h3>
+      
+      <div class="info">
+        <div class="info-col info-col-text">
+          <p>
+            Hi, I'm <a href="http://rizwanakhan.com/">Riz</a> and I like Hamilton. And I figured, if we're having a watchparty on <strong>Sunday 5th July</strong>, there should
+            be a way for people to find out, <strong>exactly</strong>, what point in the (2h 40m) musical we're at, at any given time during
+            the <a href="https://twitter.com/hashtag/TNHamAlong?src=hashtag_click">#TNHamAlong</a>, no? 
+            <br>
+            <br>
+            ^A̶ ̶n̶o̶v̶e̶l̶ ̶i̶d̶e̶a̶ I was bored.
+          </p>
+        </div>
+        <div class="info-col info-col-tweet">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎶 Join us on Sunday 5th July at 8pm for the official <a href="https://twitter.com/hashtag/TechNott?src=hash&amp;ref_src=twsrc%5Etfw">#TechNott</a> <a href="https://twitter.com/hashtag/Hamilfilm?src=hash&amp;ref_src=twsrc%5Etfw">#Hamilfilm</a> watchalong!<br><br>We&#39;ll be gathering in the <a href="https://twitter.com/hashtag/Hamilton?src=hash&amp;ref_src=twsrc%5Etfw">#Hamilton</a> channel on the Tech Nottingham Slack and tweeting along here on <a href="https://twitter.com/hashtag/TNHamAlong?src=hash&amp;ref_src=twsrc%5Etfw">#TNHamAlong</a> 🎶 🎭<a href="https://t.co/veCYbPnLPS">https://t.co/veCYbPnLPS</a> <a href="https://t.co/G1LQtZL8Qu">pic.twitter.com/G1LQtZL8Qu</a></p>&mdash; Tech Nottingham (@technottingham) <a href="https://twitter.com/technottingham/status/1278787735969583104?ref_src=twsrc%5Etfw">July 2, 2020</a></blockquote> 
+        </div>
+      </div>
+
+    </section>
+    
+    <section class="time-section">
+      
+      
+      <h3 class="main-title">Here's the timer:</h3>
+      <p class="timer-instructions">
+        <strong>This timer will kick-off exactly on <span class="highlight">Sunday 5th, July</span>, at precisely <span class="highlight">8:00PM</span>.</strong>
+      </p>
+      
+      <p>
+        If you had to Take A Break in between the watchalong, forward (or rewind?)
+        to this timestamp in your stream:
+      </p>
+      <div id="timer-panel">
+        <div class="values">00:00:00</div>
+        <div class="fin"></div>
+      </div>
+
+
+    </section>
+    
+
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
