@@ -1,2 +1,2 @@
 # TNHamAlong
-purpose-built for Tech Nottingham's Hamilton watch party
+purpose-built little web page for Tech Nottingham's Hamilton watch party
