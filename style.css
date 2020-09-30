@@ -1,0 +1,95 @@
+/* CSS files add styling rules to your content */
+
+
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #ffd88a 0%, #c67700 100%);
+}
+
+p {
+  font-size: 2em;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.header-section {
+  display: block;
+  text-align: right;
+}
+
+.main-title {
+  color: black;
+  font-weight: normal;
+/*   font-family: 'Great Vibes', cursive; */
+  font-family: 'Niconne', cursive;
+  background-color: white;
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 2em;  
+}
+
+.ham-logo {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0.8em 0 0.8em;
+  display: block;
+  margin: 0 auto;
+}
+
+.content-section {
+  padding: 0 3em 0;
+/*   margin: 0 auto 0 4em; */
+}
+
+
+.entry-content .twitter-tweet-rendered {
+  max-width: 100% !important;
+}
+
+.twitter-tweet {
+  width: 100vw !important;
+}
+
+.info {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.info-col {
+  flex: 50%;
+}
+
+.info-col-tweet {
+
+}
+
+.info-col-text {
+  order: -1;
+}
+
+.values {
+  font-size: 10em;
+  font-family: 'Noto Serif SC', serif;
+  color: white;
+}
+
+.time-section {
+    padding: 0 3em 0;
+}
+
+.fin {
+  font-family: 'Niconne', cursive;
+  font-size: 3em;
+}
+
+.highlight {
+  text-decoration: underline;
+}
+
+/* 
+.main-title {
+  margin: 0;
+  padding: 0;
+} */
